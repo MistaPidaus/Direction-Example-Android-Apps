@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.pidaus.pojeks.MainActivity">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            tools:context=".MainActivity"
+            tools:layout_editor_absoluteY="0dp">
+
+            <TextView
+                android:id="@+id/translatetext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/button3"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="126dp"
+                android:text="PIDAUS!"
+                android:textSize="30sp"
+                style="@style/PUOStyle"/>
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/button2"
+                android:layout_alignBottom="@+id/button2"
+                android:layout_toEndOf="@+id/translatetext"
+                android:onClick="move"
+                android:text="RIGHT" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/button4"
+                android:layout_marginBottom="30dp"
+                android:layout_marginEnd="13dp"
+                android:layout_toStartOf="@+id/translatetext"
+                android:onClick="left"
+                android:text="left" />
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/button4"
+                android:layout_alignStart="@+id/button4"
+                android:layout_marginBottom="17dp"
+                android:onClick="up"
+                android:text="up" />
+
+            <Button
+                android:id="@+id/button4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="92dp"
+                android:onClick="down"
+                android:text="down" />
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/button3"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="113dp"
+                android:src="@mipmap/ic_launcher_round" />
+
+        </RelativeLayout>
+</android.support.constraint.ConstraintLayout>
